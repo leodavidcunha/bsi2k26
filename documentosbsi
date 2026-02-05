@@ -1,0 +1,828 @@
+
+
+
+ 
+
+
+DOCUMENTO DE TELAS 
+
+BSI – BSAM (MVP-PIM)
+
+ 
+
+
+BALANÇO SOCIOAMBIENTAL MONETIZADO 
+NBC T15
+
+
+
+
+Manaus - Amazonas
+Fevereiro / 2026
+
+1. Camada de Acesso e Controle
+O sistema opera por meio de autenticação por login e senha, com perfis de acesso distintos e não sobrepostos, sendo eles:
+•	Contador Responsável da Indústria;
+•	Agente ESG da Indústria.
+Todas as ações realizadas no sistema são registradas com identificação do usuário, data, hora e perfil, garantindo trilha de auditoria e controle das responsabilidades técnicas.
+Controle de acesso por perfil, de forma simples.
+________________________________________
+2. Camada de Inicialização – FIO (Formulário de Informações da Organização)
+O FIO constitui a abertura formal do exercício no sistema.
+Compete exclusivamente ao contador responsável:
+•	acessar e abrir o FIO;
+•	preencher as informações obrigatórias da organização;
+•	informar o CNPJ;
+•	identificar o responsável ESGT.
+A validação do FIO habilita automaticamente o sistema, liberando o acesso à Matrix IRES.
+
+2.1 - Tela do Sistema — FIO (Tela Real Preenchida – Exemplo MVP)
+Acesso exclusivo do Responsável Contador
+Campo	Valor
+Razão Social	Amazontech Eletroeletrônica da Amazônia S.A.
+CNPJ	12.345.678/0001-90
+CNAE Principal	Produção de eletroeletrônicos 
+Área de Atuação	Indústústria para fabricação de eletroeletrônicos 
+Regime Tributário 	Lucro Real
+Exercício de Referência	2025
+Endereço Completo	Av. Buriti, 456, CEP 69098-010
+Município	Manaus
+Estado	Amazonas
+Responsável Contador	João Ribeiro
+Nº do CRC	CRC-AM 012345/O-6
+Agente ESGT                        	Ana Carolina
+Departamento	Sustentabilidade
+E-mail de contato	contato@amazontech.com.br 
+
+Status do Exercicio	Aberto
+________________________________________
+2.3 - Declaração de Responsabilidade Técnica e Conformidade Normativa
+Ao final da tela FIO, o sistema apresenta a seguinte declaração, de aceite obrigatório:
+Declaração
+Declaro, na qualidade de Responsável Contador, devidamente registrado no Conselho Regional de Contabilidade (CRC), que as informações contábeis apresentadas no âmbito do BSI-BSA – BIO SYSTEM IRES – Balanço Socioal e Ambiental, referentes ao exercício informado, são de minha responsabilidade técnica, nos termos da NBC T 15.
+Declaro, ainda, que as informações de natureza não contábil registradas no sistema foram elaboradas com base em dados fornecidos pela organização e por seus responsáveis técnicos, especialistas com quem compartilho a responsabilidade por essas informações, sendo indicados no sistema os critérios e controles adotados para garantir sua integridade, rastreabilidade e consistência, conforme previsto na NBC T 15.
+Reconheço que a Demonstração de Informações de Natureza Social e Ambiental gerada pelo BSI-BSA poderá ser objeto de revisão por auditor independente, nos casos em que a entidade estiver submetida a esse procedimento, devendo ser publicada juntamente com o respectivo relatório, quando aplicável, nos termos da NBC T 15.
+Declaro ciência de que todas as informações registradas no sistema são passíveis de verificação posterior, assumindo integral responsabilidade técnica pelos relatórios finais emitidos pelo BSI-BSA no exercício de referência.
+[ ] ACEITO E DECLARO CIÊNCIA
+Sem o aceite, o FIO não pode ser encerrado e fica com status: fechado.
+
+________________________________________
+3. Camada Central – Matrix IRES
+A Matrix IRES é o núcleo lógico e operacional do BIO SYSTEM IRES (MVP).
+Os blocos do MVP são:
+1.	Governança – Governsnça Corporativa 
+Base normativa: ABNT PR 2030 – P1
+2.	Econômico – Geração e Distribuição de Riqueza
+Base normativa: NBC T 15 – item 15.2.1.
+Referência específica: DVA – Demonstração do Valor Adicionado (NBC TG 09 / CPC 09).
+3.	Social – Recursos Humanos e Relações de Trabalho
+Base normativa: NBC T 15 – itens 15.2.2.1 a 15.2.2.6.
+4.	Social – Interação com o Ambiente Externo
+Base normativa: NBC T 15 – item 15.2.3
+(comunidade, clientes e fornecedores).
+5.	Ambiental – Interação com o Meio Ambiente Interno
+Base normativa: NBC T 15 – item 15.2.4
+(processos operacionais, educação ambiental interna, passivos e contingências).
+6.	Ambiental – Interação com o Meio Ambiente Externo
+Base normativa: NBC T 15 – item 15.2.4
+(comunidade, preservação ambiental, educação ambiental externa).
+Cada bloco contém itens com ELE ou ESA, que alimentam os cálculos automáticos do sistema.
+Cada bloco contém linhas de requisitos obrigatórios, parametrizadas conforme a base normativa aplicável.
+Colunas que compõem a MATRIX IRES (padrão MVP)
+•	Código do Item
+•	Origem Normativa
+•	Requisito
+•	Eixo (Governança, Econômico, Social, Ambiental) + Âmbito
+•	Dados
+•	Tipo: ELE/ESA
+•	Setas para cima verde ou baixo vermelho
+A estrutura apresentada representa o padrão inicial do MVPA Matrix IRES integra, em um único ambiente:
+•	requisitos normativos;
+•	dados declaratórios;
+•	documentos comprobatórios;
+•	validações técnicas;
+•	impactos positivos e negativos.
+BLOCOS SEGREGADOS DA MATRIX IRES
+3.1 - Tela do Sistema — MATRIX IRES
+Bloco: Econômico – Geração e Distribuição de Riqueza
+Eixo + Âmbito: ECO-I
+Organização: Amazontech Eletroeletrônica da Amazônia S.A.
+Exercício: 2026
+Código do Item	Origem Normativa	Descrição do Requisito	Eixo + Âmbito	Dados (contábil/ não contábil) 	Tipo (ELE/ESA)
+E-01	NBC T 15 – 15.2.1 / DVA	Receitas	EEC-I	CONTÁBIL	ELE
+E-02	NBC T 15 – 15.2.1 / DVA	Insumos adquiridos de terceiros	EEC-I	CONTÁBIL	ELE
+E-03	NBC T 15 – 15.2.1 / DVA	Valor Adicionado Bruto	EEC-I	CONTÁBIL	ELE
+E-04	NBC T 15 – 15.2.1 / DVA	Valor Adicionado Líquido	EEC-I	CONTÁBIL	ELE
+E-05	NBC T 15 – 15.2.1 / DVA	Distribuição do Valor Adicionado – Pessoal	EEC-I	CONTÁBIL	ELE 
+E-06	NBC T 15 – 15.2.1 / DVA	Distribuição do Valor Adicionado – Tributos	EEC-I	CONTÁBIL	ELE 
+E-07	NBC T 15 – 15.2.1 / DVA	Distribuição do Valor Adicionado – Capitais de Terceiros	EEC-I	CONTÁBIL	ELE 
+E-08	NBC T 15 – 15.2.1 / DVA	Distribuição do Valor Adicionado – Capitais Próprios	EEC-I	CONTÁBIL	ELE 
+
+Bloco: Social – Recursos Humanos
+Eixo + Âmbito: ESO-I
+Organização: Amazontech Eletroeletrônica da Amazônia S.A.
+Exercício: 2026
+Código do Item	Origem Normativa	Descrição do Requisito	Eixo + Âmbito	Dados (contábil/ não contábil) 	Tipo (ELE/ESA)
+RH-01	NBC T 15 – 15.2.2	Remuneração bruta segregada por empregados, administradores, terceirizados e autônomos	ESO-I	CONTÁBIL	ELE
+RH-02	NBC T 15 – 15.2.2	Relação entre a maior e a menor remuneração da entidade	ESO-I	CONTÁBIL	ELE
+RH-03	NBC T 15 – 15.2.2	Gastos com encargos sociais	ESO-I	CONTÁBIL	ELE
+RH-04	NBC T 15 – 15.2.2	Gastos com alimentação	ESO-I	CONTÁBIL	ELE
+RH-05	NBC T 15 – 15.2.2	Gastos com transporte	ESO-I	CONTÁBIL	ELE 
+RH-06	NBC T 15 – 15.2.2	Gastos com previdência privada	ESO-I	CONTÁBIL	ELE 
+RH-07	NBC T 15 – 15.2.2	Gastos com saúde	ESO-I	CONTÁBIL	ELE 
+RH-08	NBC T 15 – 15.2.2	Gastos com segurança e medicina do trabalho	ESO-I	CONTÁBIL	ELE 
+RH-09	NBC T 15 – 15.2.2	Gastos com educação (exceto educação ambiental)	ESO-I	CONTÁBIL	ELE 
+RH-10	NBC T 15 – 15.2.2	Gastos com cultura	ESO-I	CONTÁBIL	ELE 
+RH-11	NBC T 15 – 15.2.2	Gastos com capacitação e desenvolvimento profissional	ESO-I	CONTÁBIL	ELE 
+RH-12	NBC T 15 – 15.2.2	Gastos com creches ou auxílio-creches	ESO-I	CONTÁBIL	ELE 
+RH-13	NBC T 15 – 15.2.2	Participação nos lucros ou resultados	ESO-I	CONTÁBIL	ELE 
+Bloco: Social – Composição do Corpo Funcional
+Eixo + Âmbito: ESO-I
+Organização: Amazontech Eletroeletrônica da Amazônia S.A.
+Exercício: 2026
+Código do Item	Origem Normativa	Descrição do Requisito	Eixo + Âmbito	Dados (contábil/ não contábil) 	Tipo (ELE/ESA)
+RH-14	NBC T 15 – 15.2.2.4	Total de empregados no final do exercício	ESO-I	CONTÁBIL	ELE
+RH-15	NBC T 15 – 15.2.2.4	Total de admissões no exercício	ESO-I	CONTÁBIL	ELE
+RH-16	NBC T 15 – 15.2.2.4	Total de demissões no exercício	ESO-I	CONTÁBIL	ELE
+RH-17	NBC T 15 – 15.2.2.4	Total de estagiários no final do exercício	ESO-I	CONTÁBIL	ELE
+RH-18	NBC T 15 – 15.2.2.4	Total de empregados portadores de necessidades especiais	ESO-I	CONTÁBIL	ELE 
+RH-19	NBC T 15 – 15.2.2.4	Total de prestadores de serviços terceirizados	ESO-I	CONTÁBIL	ELE 
+RH-20	NBC T 15 – 15.2.2.4	Total de empregados por sexo	ESO-I	CONTÁBIL	ELE 
+RH-21	NBC T 15 – 15.2.2.4	Total de empregados por faixa etária	ESO-I	CONTÁBIL	ELE 
+RH-22	NBC T 15 – 15.2.2.4	Total de empregados por nível de escolaridade	ESO-I	CONTÁBIL	ELE 
+RH-23	NBC T 15 – 15.2.2.4	Percentual de ocupantes de cargos de chefia por sexo	ESO-I	CONTÁBIL	ELE 
+Bloco: Social – Ações Trabalhistas
+Eixo + Âmbito: ESO-I
+Organização: Amazontech Eletroeletrônica da Amazônia S.A.
+Exercício: 2026
+Código do Item	Origem Normativa	Descrição do Requisito	Eixo + Âmbito	Dados (contábil/ não contábil) 	Tipo (ELE/ESA)
+RH-24	NBC T 15 – 15.2.2.5	Número de processos trabalhistas movidos contra a entidade	ESO-I	CONTÁBIL	ELE
+RH-25	NBC T 15 – 15.2.2.5 / 15.2.2.6	Número de processos trabalhistas julgados procedentes (inclui acordos e parciais)	ESO-I	CONTÁBIL	ELE
+RH-26	NBC T 15 – 15.2.2.5	Número de processos trabalhistas julgados improcedentes	ESO-I	CONTÁBIL	ELE
+RH-27	NBC T 15 – 15.2.2.5	Valor total de indenizações e multas trabalhistas	ESO-I	CONTÁBIL	ELE
+Bloco: Social – Interação com a Comunidade
+Eixo + Âmbito: ESO-E
+Organização: Amazontech Eletroeletrônica da Amazônia S.A.
+Exercício: 2026
+Código do Item	Origem Normativa	Descrição do Requisito	Eixo + Âmbito	Dados (contábil/ não contábil) 	Tipo (ELE/ESA)
+EXT-COM-01	NBC T 15 – 15.2.3	Investimentos em educação (exceto educação ambiental)	ESO-E	NÃO CONTÁBIL	ESA
+EXT-COM-02	NBC T 15 – 15.2.3	Investimentos em cultura	ESO-E	NÃO CONTÁBIL	ESA
+EXT-COM-03	NBC T 15 – 15.2.3	Investimentos em saúde e saneamento	ESO-E	NÃO CONTÁBIL	ESA
+EXT-COM-04	NBC T 15 – 15.2.3	Investimentos em esporte e lazer (não publicitário)	ESO-E	NÃO CONTÁBIL	ESA
+EXT-COM-05	NBC T 15 – 15.2.3	Investimentos em alimentação	ESO-E	NÃO CONTÁBIL	ESA
+Bloco: Social – Interação com Clientes
+Eixo + Âmbito: ESO-I
+Organização: Amazontech Eletroeletrônica da Amazônia S.A.
+Exercício: 2026
+Código do Item	Origem Normativa	Descrição do Requisito	Eixo + Âmbito	Dados (contábil/ não contábil) 	Tipo (ELE/ESA)
+EXT-CLI-01	NBC T 15 – 15.2.3	Reclamações recebidas diretamente na entidade	ESO-I	CONTÁBIL	ELE
+EXT-CLI-02	NBC T 15 – 15.2.3	Reclamações recebidas por órgãos de defesa do consumidor	ESO-I	CONTÁBIL	ELE
+EXT-CLI-03	NBC T 15 – 15.2.3	Reclamações recebidas por meio da Justiça	ESO-I	CONTÁBIL	ELE
+EXT-CLI-04	NBC T 15 – 15.2.3	Reclamações atendidas em cada instância	ESO-I	CONTÁBIL	ELE
+EXT-CLI-05	NBC T 15 – 15.2.3	Multas e indenizações a clientes	ESO-I	CONTÁBIL	ELE
+EXT-CLI-06	NBC T 15 – 15.2.3	Ações para sanar ou minimizar causas das reclamações	ESO-I	CONTÁBIL	ELE
+
+Bloco: Social – Interação com Fornecedores
+Eixo + Âmbito: ESO-E
+Organização: Amazontech Eletroeletrônica da Amazônia S.A.
+Exercício: 2026
+Código do Item	Origem Normativa	Descrição do Requisito	Eixo + Âmbito	Dados (CONTÁBIL/ NÃO CONTÁBIL)	Tipo (ELE/ESA)
+EXT-FOR-01	NBC T 15 – 15.2.3	Utilização de critérios de responsabilidade social na seleção de fornecedores	ESO-E	NÃO CONTÁBIL	ESA
+
+Bloco: Ambiental – Meio Ambiente Interno
+Eixo + Âmbito: EAM-I
+Organização: Amazontech Eletroeletrônica da Amazônia S.A.
+Exercício: 2026
+Código do Item	Origem Normativa	Descrição do Requisito	Eixo + Âmbito	Dados (CONTÁBIL/ NÃO CONTÁBIL)	Tipo (ELE / ESA)
+AMB-01	NBC T 15 – 15.2.4	Investimentos e gastos com manutenção nos processos operacionais para melhoria do meio ambiente	EAM-I	CONTABIL	ELE
+AMB-02	NBC T 15 – 15.2.4	Investimentos e gastos com preservação e/ou recuperação de ambientes degradados	EAM-I	CONTÁBIL 	ELE
+AMB-03	NBC T 15 – 15.2.4	Investimentos e gastos com educação ambiental para empregados, terceirizados, autônomos e administradores	EAM-I	CONTÁBIL	ELE
+Bloco: Ambiental – Processos, Multas e Passivos Ambientais
+Eixo + Âmbito: EAM-I
+Organização: Amazontech Eletroeletrônica da Amazônia S.A.
+Exercício: 2026
+Código do Item	Origem Normativa	Descrição do Requisito	Eixo + Âmbito	Dados (CONTÁBIL/ NÃO CONTÁBIL)	Tipo (ELE / ESA)
+AMB-06	NBC T 15 – 15.2.4	Quantidade de processos ambientais administrativos e judiciais	EAM-I	CONTABIL	ELE
+AMB-07	NBC T 15 – 15.2.4	Valor das multas e indenizações ambientais	EAM-I	CONTÁBIL 	ELE
+AMB-08	NBC T 15 – 15.2.4	Passivos e contingências ambientais	EAM-I	CONTÁBIL	ELE
+________________________________________
+Bloco: Ambiental – Meio Ambiente ao Entorno
+Eixo + Âmbito: EAM-E
+
+Organização: Amazontech Eletroeletrônica da Amazônia S.A.
+Exercício: 2026
+Código do Item	Origem Normativa	Descrição do Requisito	Eixo + Âmbito	Dados (CONTÁBIL/ NÃO CONTÁBIL)	Tipo (ELE / ESA)
+AMB-04	NBC T 15 – 15.2.4	Investimentos e gastos com educação ambiental para a comunidade	EAM-E	CONTABIL	ELE
+AMB-05	NBC T 15 – 15.2.4	Conservação e uso sustentável da biodiversidade local	EAM-E	CONTÁBIL 	ELE
+					
+________________________________________
+BLOCO GOVERNANÇA ORGANIZACIONAL — ABNT PR 2030-1
+Eixo + Âmbito: EGOV-I
+Organização: Amazontech Eletroeletrônica da Amazônia S.A.
+Exercício: 2026
+Natureza: Governança institucional (declaratória e estrutural)
+Código do Item	Origem Normativa	Descrição do Requisito	Eixo + Âmbito	Dados (Contábil / Não Contábil)	Tipo
+GOV-GO-01	ABNT PR 2030-1	Estrutura e composição da governança organizacional	EGOV-I	CONTÁBIL	ELE
+GOV-GO-02	ABNT PR 2030-1	Propósito e estratégia organizacional alinhados à sustentabilidade	EGOV-I	CONTÁBIL	ELE
+GOV-CE-01	ABNT PR 2030-1	Compliance, integridade e práticas anticorrupção	EGOV-I	CONTÁBIL	ELE
+GOV-CE-02	ABNT PR 2030-1	Práticas antitruste e concorrência leal	EGOV-I	CONTÁBIL	ELE
+GOV-CE-03	ABNT PR 2030-1	Engajamento das partes interessadas	EGOV-I	CONTÁBIL	ELE
+GOV-PCG-01	ABNT PR 2030-1	Gestão de riscos do negócio	EGOV-I	CONTÁBIL	ELE
+GOV-PCG-02	ABNT PR 2030-1	Controles internos	EGOV-I	CONTÁBIL	ELE
+GOV-PCG-03	ABNT PR 2030-1	Auditorias interna e externa	EGOV-I	CONTÁBIL	ELE
+GOV-PCG-04	ABNT PR 2030-1	Conformidade com o ambiente legal e regulatório	EGOV-I	CONTÁBIL	ELE
+		Segurança da informação	EGOV-I	CONTÁBIL	ELE
+		Privacidade de dados pessoais	EGOV-I	CONTÁBIL	ELE
+GOV-TG-01	ABNT PR 2030-1	Prestação de contas e accountability	EGOV-I	CONTÁBIL	ELE
+		Relatórios ESG / sustentabilidade	EGOV-I	CONTÁBIL	ELE
+
+________________________________________
+
+ESTRUTURA OPERACIONAL DOS REGISTROS ELE E ESA
+Tela ELE + DVA
+Identificação do Registro (referência automática)
+Campo	Valor
+Código do Registro	AML-CON-EEC-GDR-I-2025-001
+Nome do Registro	Distribuição do Valor Adicionado – Pessoal
+________________________________________
+Parte declaratória: Responsabilidade pela Informação Declarada
+Campo	Valor
+Departamento	Contabilidade
+Nome do Responsável pelas Informações	João Ribeiro
+Cargo	Contador
+________________________________________
+
+Valores Monetários Declarados
+Valores Monetários Declarados — DVA
+Descrição da Origem do Valor	Descrição	Valor (R$)
+DVA – Pessoal	Parcela do Valor Adicionado destinada à remuneração direta e indireta do pessoal, conforme DVA do exercício.	18.450.000,00
+Valor Adicionado Total	Total do Valor Adicionado apurado na DVA do exercício.	42.000.000,00
+Nota: No ELE + DVA, a “Descrição” não é narrativa de ação, mas identificação resumida da origem contábil do valor.
+
+________________________________________
+Indicador Derivado (cálculo automático)
+Indicador	Base de Cálculo	Resultado
+Percentual do Valor Adicionado destinado ao Pessoal	Valor Distribuído ao Pessoal ÷ Valor Adicionado Total	43,93%
+O indicador percentual é derivado automaticamente, não constitui requisito legal e utiliza exclusivamente a DVA como base, conforme regra congelada.
+________________________________________
+Documentação Comprobatória (Upload)
+•	Demonstração do Valor Adicionado (DVA) – Exercício 2025
+•	Demonstrações financeiras que suportam a DVA
+•	Outros documentos contábeis aplicáveis
+________________________________________
+TABELA DE FORMULAS PARA OS PERCENTUAIS NECESSARIOS AO BLOCO ECONOMICO 
+Item	Natureza do dado	Valor obrigatório	Percentual derivado possível
+E-01 Receitas	Monetário	✅	% sobre Receita Líquida
+E-02 Insumos	Monetário	✅	% sobre Receita
+E-03 Valor Adicionado Bruto	Monetário	✅	% sobre Receita
+E-04 Valor Adicionado Líquido	Monetário	✅	% sobre VAB
+E-05 DVA – Pessoal	Monetário	✅	% sobre VA Total
+E-06 DVA – Tributos	Monetário	✅	% sobre VA Total
+E-07 DVA – Capitais de Terceiros	Monetário	✅	% sobre VA Total
+E-08 DVA – Capitais Próprios	Monetário	✅	% sobre VA Total
+
+Tela — Parte de Validação (ELE + DVA)
+Agente ESG Responsável pela Validação
+Campo	Valor
+Nome do Validador	
+Cargo	
+Departamento	
+________________________________________
+Validação Documental AUTOMATICA— VD
+(etapa obrigatória e prévia; gate do processo)
+Critério	Resposta
+Foi feito up load de documentos para comprovação	sim
+Campos obrigatórios do ELE foram preenchidos?	Sim
+	
+Caso um dos dois campos seja marcado como não, o sistema classifica automaticamente como passivo. Caso sejam marcados como sim, então o sistema destrava automaticamente a validação manual pelo usuário. 
+
+Validação Informacional — VI
+(habilitada somente se VD = Sim)
+Critério	Resposta
+Documentos exigidos pelo item normativo foram anexados corretamente?	Sim
+Documentos íntegros, legíveis e completos?	Sim
+Coerência entre os dados declarados e os documentos apresentados?	Sim
+Documentos assinados pelo responsável técnico competente?	Sim
+Documentos devidamente registrados no departamento responsável?	Sim
+Exercício dos documentos corresponde ao exercício declarado no registro?	Sim
+________________________________________
+TIPO ELE + Social Interno (valores e segregações)
+
+Tela ELE+Social
+Identificação do Registro (referência automática)
+Campo	Valor
+Código do Registro	ELE-CON-ESO-I-2025-001
+Nome do Registro	Remuneração bruta segregada por empregados, administradores, terceirizados e autônomos
+________________________________________
+Parte declaratória: Responsabilidade pela Informação Declarada
+Campo	Valor
+Departamento	Recursos Humanos
+Nome do Responsável pelas Informações	Carla Menezes
+Cargo	Gerente de RH
+________________________________________
+Valores Monetários Declarados — Remuneração Bruta
+Descrição do Objeto	Categoria	Valor (R$)
+Remuneração bruta anual do exercício	Empregados	21.800.000,00
+Remuneração bruta anual do exercício	Administradores	2.100.000,00
+Remuneração bruta anual do exercício	Terceirizados	3.250.000,00
+Remuneração bruta anual do exercício	Autônomos	850.000,00
+Total		28.000.000,00
+Nota: No ELE + Social, a descrição resume o objeto normativo do valor, sem caracterizar ação (isso é exclusivo do ESA).
+ ________________________________________
+Quantitativo de Pessoas por Categoria
+(estrutura fixa; percentuais calculados automaticamente)
+Categoria	Quantidade	Percentual (%)
+Empregados	205	78,85%
+Administradores	7	2,69%
+Terceirizados	38	14,62%
+Autônomos	10	3,84%
+Total	260	100,00%
+________________________________________
+Segregações Analíticas Obrigatórias (estrutura fixa)
+a) Segregação por sexo (ancorada nas categorias acima)
+Sexo	Quantidade	Percentual (%)
+Feminino	121	46,54%
+Masculino	139	53,46%
+Total	260	100,00%
+b) Segregação por faixa etária
+Faixa Etária	Quantidade	Percentual (%)
+Até 18 anos	11	4,23%
+19 a 35 anos	109	41,92%
+36 a 60 anos	117	45,00%
+Acima de 60 anos	23	8,85%
+Total	260	100,00%
+c) Segregação por escolaridade (inclui analfabetos)
+Escolaridade	Quantidade	Percentual (%)
+Analfabetos	2	0,77%
+Ensino Fundamental	39	15,00%
+Ensino Médio	126	48,46%
+Ensino Técnico	37	14,23%
+Ensino Superior	43	16,54%
+Pós-graduação	13	5,00%
+Total	260	100,00%
+d) Cargos de chefia por sexo
+Sexo	Quantidade	Percentual (%)
+Feminino	8	38,10%
+Masculino	13	61,90%
+Total	21	100,00%
+________________________________________
+Documentação Comprobatória (Upload)
+•	Folha de pagamento consolidada
+•	Relatórios de RH do exercício
+•	Contratos de terceirização
+•	Registros de autônomos
+•	Outros documentos exigidos pela norma
+Tela — Parte de Validação (ELE + Social)
+Agente ESGT Responsável pela Validação
+Campo	Valor
+Nome do Validador	
+Cargo	
+Departamento	
+________________________________________
+Validação Documental AUTOMATICA— VD
+(etapa obrigatória e prévia; gate do processo)
+Critério	Resposta
+Foi feito up load de documentos para comprovação	sim
+Campos obrigatórios do ELE foram preenchidos?	Sim
+	
+Validação Informacional — VI
+(habilitada somente se VD = Sim)
+
+Critério	Resposta
+Documentos exigidos pelo item normativo foram anexados corretamente?	Sim
+Documentos íntegros, legíveis e completos?	Sim
+Coerência entre os dados declarados e os documentos apresentados?	Sim
+Documentos assinados pelo responsável técnico competente?	Sim
+Documentos devidamente registrados no departamento responsável?	Sim
+Exercício dos documentos corresponde ao exercício declarado no registro?	Sim
+________________________________________
+
+
+TIPO ELE + Ambiental Interno 
+Tela ELE + Ambiental
+Identificação do Registro (referência automática)
+Campo	Valor
+Código do Registro	ELE-CONT-EAM-PROINVEST-I-2025-001
+Nome do Registro	Investimentos e gastos com manutenção nos processos operacionais para melhoria do meio ambiente
+________________________________________
+Responsabilidade pela Informação Declarada
+Campo	Valor
+Departamento	Meio Ambiente
+Nome do Responsável pelas Informações	Ricardo Almeida
+Cargo	Gerente Ambiental
+________________________________________
+Valores Monetários Declarados — Investimentos Ambientais
+Descrição do Objeto Ambiental	Categoria	Valor (R$)
+Investimentos: Adequação de processos produtivos para redução de impactos ambientais	Investimentos em adequação de processos	3.200.000,00
+Gastos: Manutenção ambiental preventiva e corretiva em processos operacionais	Gastos com manutenção ambiental operacional	1.450.000,00
+Total aplicado em meio ambiente		4.650.000,00
+________________________________________
+Segregações Ambientais Quantitativas (quando aplicável)
+(estrutura fixa; percentuais calculados automaticamente)
+Tipo de Ação Ambiental	Valor (R$)	Percentual (%)
+Gastos: Controle e mitigação de impactos ambientais operacionais	1.520.000,00	32,69%
+Gastos: Tratamento e controle ambiental de resíduos e efluentes	1.840.000,00	39,57%
+Investimentos: Eficiência ambiental de processos e consumo de recursos	890.000,00	19,14%
+Investimentos: Proteção e recuperação ambiental vinculada à operação	400.000,00	8,60%
+Total	4.650.000,00	100,00%
+________________________________________
+6.1.2.3 — ELE + Ambiental Interno (Parte de Validação)
+Agente ESGT Responsável pela Validação
+Campo	Valor
+Nome do Validador	
+Cargo	
+Departamento	
+________________________________________
+Validação Documental AUTOMATICA— VD
+(etapa obrigatória e prévia; gate do processo)
+Critério	Resposta
+Foi feito up load de documentos para comprovação	sim
+Campos obrigatórios do ELE foram preenchidos?	Sim
+	
+Validação Informacional — VI
+(habilitada somente se VD = Sim)
+
+Critério	Resposta
+Documentos exigidos pelo item normativo foram anexados corretamente?	Sim
+Documentos íntegros, legíveis e completos?	Sim
+Coerência entre os dados declarados e os documentos apresentados?	Sim
+Documentos assinados pelo responsável técnico competente?	Sim
+Documentos devidamente registrados no departamento responsável?	Sim
+Exercício dos documentos corresponde ao exercício declarado no registro?	Sim
+________________________________________
+TIPO ELE + GOVERNANÇA 
+Tela — Parte Declaratória (ELE Governança)
+Identificação do Registro (referência automática)
+Campo	Valor
+Código do Registro	ELE-CON-EGOV-GOV-I-2026-001
+Nome do Registro	Estrutura e Composição da Governança Organizacional
+________________________________________
+Responsabilidade pela Informação Declarada
+Campo	Valor
+Departamento	Governança Corporativa
+Nome do Responsável pelas Informações	Maria Fernandes
+Cargo	Diretora de Governança
+________________________________________
+Informações Declaratórias Obrigatórias
+Campo	Informação Declarada
+Órgãos de governança existentes	Conselho de Administração, Diretoria Executiva
+Composição dos órgãos	Membros internos e independentes
+Critérios de nomeação	Estatuto social e políticas internas
+Periodicidade das reuniões	Ordinária trimestral
+Existência de regimento interno	Sim
+Formalização das responsabilidades	Definidas em estatuto e atas
+Documentação Comprobatória (Upload obrigatório)
+•	Estatuto Social vigente
+•	Regimento Interno do Conselho
+•	Atas de nomeação e posse
+•	Organograma institucional
+
+ELE + GOVERNANÇA (Parte de Validação)
+Agente ESG Responsável pela Validação
+Campo	Valor
+Nome do Validador	
+Cargo	
+Departamento	
+________________________________________
+Validação Documental AUTOMATICA— VD
+(etapa obrigatória e prévia; gate do processo)
+Critério	Resposta
+Foi feito up load de documentos para comprovação	sim
+Campos obrigatórios do ELE foram preenchidos?	Sim
+	
+Validação Informacional — VI
+(habilitada somente se VD = Sim)
+
+Critério	Resposta
+Documentos exigidos pelo item normativo foram anexados corretamente?	Sim
+Documentos íntegros, legíveis e completos?	Sim
+Coerência entre os dados declarados e os documentos apresentados?	Sim
+Documentos assinados pelo responsável técnico competente?	Sim
+Documentos devidamente registrados no departamento responsável?	Sim
+Exercício dos documentos corresponde ao exercício declarado no registro?	Sim
+
+ELE GOVERNANÇA — PARÂMETROS DECLARATÓRIOS POR ITEM
+(Modelo estrutural único | Parte Declaratória parametrizada pela Matrix IRES)
+Nesse caso, a estrutura do ELE permanece a mesma alterando apenas os campos da parte declaratória. Abaixo estão os campos segregados por item do bloco governança e suas exigências.
+________________________________________
+🔹 GOV-GO-01 — Estrutura e composição da governança organizacional
+Campos declaratórios obrigatórios
+•	Órgãos de governança existentes
+•	Estrutura hierárquica dos órgãos
+•	Quantidade de membros por órgão
+•	Existência de membros independentes
+•	Critérios de nomeação e destituição
+•	Mandato e periodicidade de reuniões
+•	Existência de regimento interno
+Documentos mínimos
+•	Estatuto social
+•	Regimento interno
+•	Atas de nomeação/posse
+•	Organograma institucional
+________________________________________
+🔹 GOV-GO-02 — Propósito e estratégia organizacional alinhados à sustentabilidade
+Campos declaratórios obrigatórios
+•	Declaração formal de propósito
+•	Existência de estratégia corporativa formal
+•	Integração da sustentabilidade à estratégia
+•	Órgão responsável pela estratégia
+•	Periodicidade de revisão estratégica
+Documentos mínimos
+•	Planejamento estratégico
+•	Política de sustentabilidade
+•	Atas de aprovação estratégica
+•	Código de valores ou missão institucional
+________________________________________
+🔹 GOV-CE-01 — Compliance, integridade e práticas anticorrupção
+Campos declaratórios obrigatórios
+•	Existência de programa de compliance
+•	Existência de código de ética e conduta
+•	Canal de denúncias formalizado
+•	Responsável pelo compliance
+•	Treinamentos realizados (sim/não)
+•	Procedimentos disciplinares previstos
+Documentos mínimos
+•	Código de ética
+•	Política anticorrupção
+•	Manual de compliance
+•	Evidência do canal de denúncias
+________________________________________
+🔹 GOV-CE-02 — Práticas antitruste e concorrência leal
+Campos declaratórios obrigatórios
+•	Política antitruste formal
+•	Procedimentos de prevenção
+•	Treinamento específico (sim/não)
+•	Responsável interno designado
+•	Existência de sanções internas
+Documentos mínimos
+•	Política antitruste
+•	Código de conduta comercial
+•	Registros de treinamentos (quando aplicável)
+________________________________________
+🔹 GOV-CE-03 — Engajamento das partes interessadas
+Campos declaratórios obrigatórios
+•	Identificação das partes interessadas
+•	Metodologia de engajamento adotada
+•	Periodicidade do engajamento
+•	Órgão responsável
+•	Registro formal das interações
+Documentos mínimos
+•	Mapa de stakeholders
+•	Política de relacionamento
+•	Atas, relatórios ou registros de engajamento
+________________________________________
+🔹 GOV-PCG-01 — Gestão de riscos do negócio
+Campos declaratórios obrigatórios
+•	Existência de política de gestão de riscos
+•	Metodologia adotada
+•	Identificação formal dos riscos
+•	Responsável pela gestão de riscos
+•	Periodicidade de revisão
+•	Integração com decisões estratégicas
+Documentos mínimos
+•	Política de riscos
+•	Matriz de riscos
+•	Relatórios de riscos
+•	Atas de comitê (quando houver)
+________________________________________
+🔹 GOV-PCG-02 — Controles internos
+Campos declaratórios obrigatórios
+•	Existência de sistema de controles internos
+•	Abrangência dos controles
+•	Responsável designado
+•	Procedimentos documentados
+•	Monitoramento periódico (sim/não)
+Documentos mínimos
+•	Manual de controles internos
+•	Fluxogramas de processos
+•	Relatórios de controle
+________________________________________
+🔹 GOV-PCG-03 — Auditorias interna e externa
+Campos declaratórios obrigatórios
+•	Existência de auditoria interna
+•	Existência de auditoria externa
+•	Periodicidade das auditorias
+•	Independência do auditor
+•	Tratamento das recomendações
+Documentos mínimos
+•	Relatórios de auditoria
+•	Contrato com auditor externo
+•	Planos de ação decorrentes
+________________________________________
+🔹 GOV-PCG-04 — Conformidade com o ambiente legal e regulatório
+Campos declaratórios obrigatórios
+•	Processo de monitoramento legal
+•	Responsável pela conformidade
+•	Atualização normativa periódica
+•	Tratamento de não conformidades
+•	Integração com compliance
+Documentos mínimos
+•	Mapa legal
+•	Procedimentos de atualização normativa
+•	Registros de conformidade
+________________________________________
+🔹 GOV-TG-01 — Prestação de contas e accountability
+Campos declaratórios obrigatórios
+•	Existência de mecanismos formais de prestação de contas
+•	Transparência das decisões
+•	Comunicação com partes interessadas
+•	Responsável pela accountability
+•	Periodicidade da prestação de contas
+Documentos mínimos
+•	Relatórios institucionais ESG
+•	Atas de assembleia ou conselho
+•	Políticas de transparência
+🔹 GOV-PCG-05 — Segurança da Informação
+Campos declaratórios obrigatórios
+• Existência de política de segurança da informação
+• Estrutura de governança de segurança formalizada
+• Responsável pela segurança da informação designado
+• Controles de acesso e proteção de sistemas
+• Gestão de incidentes de segurança
+• Plano de continuidade de negócios ou recuperação de desastres
+• Revisão periódica da política
+Documentos mínimos
+• Política de Segurança da Informação
+• Normas e procedimentos de controle de acesso
+• Plano de Continuidade de Negócios / Disaster Recovery
+• Registros de gestão de incidentes
+• Ata de aprovação da política
+________________________________________
+🔹 GOV-PCG-06 — Privacidade de Dados Pessoais
+Campos declaratórios obrigatórios
+• Existência de política de privacidade e proteção de dados
+• Programa de governança de dados implementado
+• Encarregado/DPO formalmente designado
+• Mapeamento de dados pessoais realizado
+• Procedimentos para tratamento de incidentes de dados
+• Canal de atendimento ao titular de dados
+• Treinamentos sobre proteção de dados
+• Revisão periódica da política
+Documentos mínimos
+• Política de Privacidade
+• Nomeação formal do DPO
+• Registro das operações de tratamento de dados
+• Procedimentos de resposta a incidentes
+• Registros de treinamentos
+________________________________________
+🔹 GOV-TG-02 — Relatórios ESG / Sustentabilidade
+Campos declaratórios obrigatórios
+• Existência de relatório ESG ou de sustentabilidade
+• Periodicidade de divulgação
+• Padrão ou metodologia de reporte adotada
+• Instância de governança responsável pelo relatório
+• Processo formal de coleta e consolidação de dados
+• Aprovação pela alta administração
+• Disponibilização pública do relatório
+• Revisão periódica do processo de reporte
+Documentos mínimos
+• Relatório ESG / Sustentabilidade publicado
+• Ata de aprovação pela administração
+• Metodologia de reporte
+• Evidência de divulgação pública
+
+________________________________________
+🧱 REGRA FINAL (IMPORTANTE — PARA O TEXTO DO SISTEMA)
+Todos os itens do Bloco Governança utilizam um único modelo estrutural de ELE Governança, sendo os campos declaratórios e a documentação exigida parametrizados automaticamente conforme o item de origem da Matrix IRES, sem alteração da lógica de validação ou do resultado sistêmico.
+
+MODELO OPERACIONAL — ESA (AÇÃO SOCIOAMBIENTAL) 
+Versão adaptada ao BSI-BSAM – arquitetura atual)
+________________________________________
+Tela — Parte Automática (ESA + SOCIAL EXTERNO)
+Campo	Valor
+Código do Registro	ESA-NAO-CONTABIL-ESO-E-2026-001
+Nome do Registro	Ações de Interesse Público Executadas
+________________________________________
+Leitura do Código do Registro (lógica interna)
+•	ESA → tipo de registro (ação)
+•	NAO-CONTABIL → natureza da informação
+•	ESO → bloco (ex.: Social / Ambiental / Tecnológico, conforme Matrix)
+•	E → âmbito externo (ou I, quando aplicável)
+•	2026 → exercício
+•	001 → sequencial sistêmico
+Parte Declaratória do ESA+ social externo
+________________________________________
+Tabela de Ações Executadas (estrutura fixa)
+Tipo de Ação	Descrição da Ação Executada	Valor Aplicado (R$)	Público Beneficiado	Resultado Mensurável
+Educação técnica	Cursos de eletrônica básica com aulas teóricas e práticas em laboratório comunitário	520.000,00	210 jovens	168 certificados
+Educação básica	Reforço escolar em matemática e português para alunos da rede pública	380.000,00	190 jovens	152 aprovados
+Educação profissional	Oficinas de preparação para o trabalho	350.000,00	100 jovens	68 ingressos no mercado
+Total		1.250.000,00	500 pessoas	—
+🔒 Regra fixa: No ESA, a Descrição da Ação é sempre obrigatória, pois caracteriza a ação de interesse público executada.
+________________________________________
+Perfil do Público Beneficiado (consolidado)
+a) Faixa Etária
+Faixa Etária	Quantidade	Percentual
+15 a 17 anos	150	30,0%
+18 a 24 anos	270	54,0%
+25 a 29 anos	80	16,0%
+Total	500	100%
+b) Sexo
+Sexo	Quantidade	Percentual
+Feminino	220	44,0%
+Masculino	280	56,0%
+Total	500	100%
+________________________________________
+Parte de Validação do ESA
+Agente ESG Responsável pela Validação
+Campo	Valor
+Nome do Validador	Mariana Souza Ferreira
+Cargo	Gerente ESG
+Departamento	Sustentabilidade
+
+Responsabilidade Técnica Profissional (Obrigatória no ESA + social externo)
+Campo	Valor
+Profissional Responsável	
+Formação	Assistente social 
+Conselho Profissional	
+Número do Registro	
+
+
+
+________________________________________
+Validação Documental AUTOMÁTICA — VD
+(etapa obrigatória e prévia; gate do processo)
+Critério	Resposta
+Documentos exigidos foram anexados?	Sim
+Campos obrigatórios do ESA foram preenchidos?	Sim
+Validação Informacional — VI
+(habilitada somente se VD = Sim)
+Critério	Resposta
+Coerência entre ações, valores, públicos e resultados declarados?	Sim
+Existência de responsável técnico válido para a ação?	Sim
+Documentos assinados pelo responsável técnico competente?	Sim
+Documentos registrados no departamento responsável?	Sim
+Exercício dos documentos corresponde ao exercício do registro?	Sim
+________________________________________
+
+ESA + AMBIENTAL EXTERNO 
+(Modelo ajustado ao BSI-BSAM – versão atual)
+________________________________________
+Tela — Parte Automática (ESA + Ambiental externo)
+Campo	Valor
+Código do Registro	ESA-NAO-CONTABIL-EAM-PROINVEST-E-2026-001
+Nome do Registro	Conservação e uso sustentável da biodiversidade local
+Bloco	Ambiental – Projetos e Investimentos Ambientais (PROINVEST)
+Âmbito	Externo
+________________________________________
+
+Responsabilidade pela Informação Declarada (Gestão da Ação)
+Campo	Valor
+Departamento	Meio Ambiente
+Nome do Responsável pelas Informações	Carlos Nogueira
+Cargo	Coordenador de Projetos Ambientais
+________________________________________
+Responsabilidade Técnica Profissional (Obrigatória no ESA + Ambiental EXTERNO)
+Campo	Valor
+Profissional Responsável	Juliana Martins
+Formação	Bióloga
+Conselho Profissional	CRBio
+Número do Registro	CRBio-06 98765
+________________________________________
+Tabela de Ações Ambientais externas Executadas (estrutura fixa)
+Tipo de Ação Ambiental	Descrição da Ação Executada	Valor Aplicado (R$)	Objeto Ambiental Beneficiado	Resultado Mensurável
+Conservação da biodiversidade local	Monitoramento e proteção de áreas naturais preservadas no entorno da comunidade, não degradadas pela empresa	520.000,00	42 ha de áreas naturais	Áreas monitoradas e protegidas
+Uso sustentável da biodiversidade	Apoio a iniciativas comunitárias de manejo sustentável de recursos naturais locais	430.000,00	Comunidades do entorno	8 iniciativas apoiadas
+Pesquisa aplicada à biodiversidade	Estudos de fauna e flora local para subsidiar ações de conservação comunitária	300.000,00	Ecossistemas locais	5 estudos técnicos concluídos
+Total		1.250.000,00	—	—
+________________________________________
+Declarações Normativas Obrigatórias
+•	As ações não configuram compensação ambiental.
+•	As ações não correspondem à recuperação ou mitigação de passivos ambientais da própria organização.
+•	As áreas ambientais beneficiadas não foram degradadas pela empresa.
+•	Educação ambiental interno é tratada em item normativo distinto e não integra este ESA.
+✔️ Declarações confirmadas: Sim
+________________________________________
+Documentação Comprobatória (Upload)
+•	Relatórios técnicos ambientais
+•	Pareceres do responsável técnico
+•	Registros fotográficos e mapas das áreas
+•	Termos de parceria com comunidades
+•	Relatórios de acompanhamento dos projetos
+________________________________________
+Parte de Validação do ESA Ambiental externo 
+Agente ESG Responsável pela Validação
+Campo	Valor
+Nome do Validador	Mariana Souza Ferreira
+Cargo	Gerente ESG
+Departamento	Sustentabilidade
+________________________________________
+Validação Documental AUTOMÁTICA — VD
+(etapa obrigatória e prévia; gate do processo)
+Critério	Resposta
+Documentos exigidos pelo item normativo foram anexados?	Sim
+Campos obrigatórios do ESA foram devidamente preenchidos?	Sim
+Documentos íntegros, legíveis e completos?	Sim
+Validação Informacional — VI
+(habilitada somente se VD = Sim)
+Critério	Resposta
+Coerência entre ações ambientais, valores e resultados declarados?	Sim
+Existência de responsável técnico profissional válido?	Sim
+Documentos assinados pelo responsável técnico competente?	Sim
+Documentos devidamente registrados no departamento responsável?	Sim
+Exercício dos documentos corresponde ao exercício declarado no registro?	Sim
+________________________________________
+
+
+
+________________________________________
